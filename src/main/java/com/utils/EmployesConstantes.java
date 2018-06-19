@@ -14,6 +14,7 @@ public final class EmployesConstantes {
     public static final String SQL_SELECT_TOUS_EMPLOYES = "SELECT * FROM EMPLOYES";
     public static final String SQL_SELECT_IDENTIFIANTS = "SELECT * from IDENTIFIANTS";
 
+
     //Constantes lié aux actions / submit
     public static final String ACTION = "action";
     public static final String ACTION_SUPPRIMER = "Supprimer";
@@ -21,6 +22,7 @@ public final class EmployesConstantes {
     public static final String ACTION_MODIFIER = "Modifier";
     public static final String ACTION_VOIR_LISTE = "VoirListe";
     public static final String ACTION_LOGIN = "Login";
+    public static final String ACTION_AJOUTER = "Ajouter";
 
     //Constantes représentant les input de type text ou radio
     public static final String FRM_LOGIN = "login";
@@ -47,10 +49,11 @@ public final class EmployesConstantes {
     public static final String ERREUR_AUCUNE_LIGNE_SELECT = "Vous n'avez sélectionné aucun employé!";
 
     //URL des pages jsp
-    public static final String PAGE_INDEX = "/WEB-INF/index.jsp";
+    public static final String PAGE_INDEX = "/WEB-INF/Vue/index.jsp";
 //    public static final String PAGE_CONTROLEUR = "controleur.jsp";
 //    public static final String PAGE_CONTROLEUR_TABLEAU = "controleurTableauEmployes.jsp";
-    public static final String PAGE_TOUS_LES_EMPLOYES = "/WEB-INF/tableauEmployes.jsp";
-    public static final String PAGE_DETAIL_EMPLOYE = "/WEB-INF/detailsEmploye.jsp";
+    public static final String PAGE_TOUS_LES_EMPLOYES = "/WEB-INF/Vue/tableauEmployes.jsp";
+    public static final String PAGE_DETAIL_EMPLOYE = "/WEB-INF/Vue/detailsEmploye.jsp";
+    public static final String PAGE_AJOUT_EMPLOYE = "/WEB-INF/Vue/ajoutEmploye.jsp";
 
 }

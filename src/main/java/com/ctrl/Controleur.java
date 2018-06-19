@@ -172,6 +172,14 @@ public class Controleur extends HttpServlet {
                     request.setAttribute("cleListeEmployes", listeEmployes);
                     request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
                     break;
+                    
+                    
+                case EmployesConstantes.ACTION_AJOUTER:
+                    emEmploye.ajouterEmploye(employe);
+                   
+                    listeEmployes.addAll(emEmploye.getEmployes());
+                    request.setAttribute("cleListeEmployes", listeEmployes);
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
             }
         }
     }
