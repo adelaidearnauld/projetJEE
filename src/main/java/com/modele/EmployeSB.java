@@ -40,6 +40,24 @@ public class EmployeSB {
         q.executeUpdate();
 
     }
+    
+    public void ajouterEmploye(Employe empl){
+        
+        Employe employe = new Employe();
+        
+        employe.setPrenom(empl.getPrenom());
+        employe.setNom(empl.getNom());
+        employe.setAdresse(empl.getAdresse());
+        employe.setCodepostal(empl.getCodepostal());
+        employe.setEmail(empl.getEmail());
+        employe.setTeldom(empl.getTeldom());
+        employe.setTelport(empl.getTelport());
+        employe.setTelpro(empl.getTelpro());
+        employe.setVille(empl.getVille());
+
+        this.persist(employe);
+  
+    }
 
     public void modifierEmploye(Employe empl) {
 
@@ -79,6 +97,8 @@ public class EmployeSB {
         return findAllQuery.getResultList();
 
     }
+        
+        
 
     public void persist(Object object) {
         em.persist(object);

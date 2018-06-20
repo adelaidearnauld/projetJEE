@@ -61,8 +61,8 @@ public class Controleur extends HttpServlet {
         String loginForm = request.getParameter(EmployesConstantes.FRM_LOGIN);
         String mdpForm = request.getParameter(EmployesConstantes.FRM_MDP);
         String action = request.getParameter(EmployesConstantes.ACTION);
-        listeEmployes = new ArrayList<>();
-        listeCredentials = new ArrayList<>();
+        listeEmployes = new ArrayList<Employe>();
+        listeCredentials = new ArrayList<Identifiants>();
 
         if (action == null) {
             request.getRequestDispatcher(EmployesConstantes.PAGE_INDEX).forward(request, response);
@@ -174,9 +174,13 @@ public class Controleur extends HttpServlet {
                     request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
                     break;
                     
-                 case EmployesConstantes.ACTION_AJOUTER_EMP:
-                    request.getRequestDispatcher(EmployesConstantes.PAGE_AJOUTER_EMPLOYE).forward(request, response);
-                    break;
+                    
+                case EmployesConstantes.ACTION_AJOUTER:
+                    emEmploye.ajouterEmploye(employe);
+                   
+                    listeEmployes.addAll(emEmploye.getEmployes());
+                    request.setAttribute("cleListeEmployes", listeEmployes);
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
             }
         }
     }
