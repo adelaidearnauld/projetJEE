@@ -86,7 +86,7 @@
                             <div class="col-sm-offset-2 col-sm-10">
                                 <div class="pull-right">
                                     <button type="submit" name="action" value="Modifier" class="btn btn-primary">Modifier</button>
-                                    <button type="submit" name="action" value="VoirListe" class="btn btn-default" >Voir liste</button>
+                                    <button type="submit" name="action" value="Voir Liste" class="btn btn-default" >Voir liste</button>
                                 </div>
                             </div>
                         </div>

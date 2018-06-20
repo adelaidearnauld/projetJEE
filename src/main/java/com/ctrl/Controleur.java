@@ -175,12 +175,28 @@ public class Controleur extends HttpServlet {
                     break;
                     
                     
-                case EmployesConstantes.ACTION_AJOUTER:
+                case EmployesConstantes.ACTION_AJOUTER:              
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_AJOUT_EMPLOYE).forward(request, response);
+                    break;
+                    
+                case EmployesConstantes.ACTION_ADD_EMPLOYE:
+                    
+                    employe = new Employe(
+                            request.getParameter(EmployesConstantes.CHAMP_NOM),
+                            request.getParameter(EmployesConstantes.CHAMP_PRENOM),
+                            request.getParameter(EmployesConstantes.CHAMP_TELDOMICILE),
+                            request.getParameter(EmployesConstantes.CHAMP_TELPORTABLE),
+                            request.getParameter(EmployesConstantes.CHAMP_TELPRO),
+                            request.getParameter(EmployesConstantes.CHAMP_ADRESSE),
+                            request.getParameter(EmployesConstantes.CHAMP_CODEPOSTAL),
+                            request.getParameter(EmployesConstantes.CHAMP_VILLE),
+                            request.getParameter(EmployesConstantes.CHAMP_EMAIL));
                     emEmploye.ajouterEmploye(employe);
-                   
+                    listeEmployes.clear();
                     listeEmployes.addAll(emEmploye.getEmployes());
                     request.setAttribute("cleListeEmployes", listeEmployes);
                     request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
+                    break;
             }
         }
     }

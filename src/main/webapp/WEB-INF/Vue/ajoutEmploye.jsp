@@ -85,7 +85,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <div class="pull-right">
-                                    <button type="submit" name="action" value="Ajouter" class="btn btn-primary">Ajouter</button>
+                                    <button type="submit" name="action" value="Ajouter Employe" class="btn btn-primary">Ajouter</button>
                                 </div>
                             </div>
                         </div>

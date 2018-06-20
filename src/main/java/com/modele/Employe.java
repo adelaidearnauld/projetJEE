@@ -42,7 +42,8 @@ public class Employe implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Integer id;
 
@@ -84,7 +85,19 @@ public class Employe implements Serializable {
         this.ville = ville;
         this.email = email;
     }
-
+    
+public Employe(String nom, String prenom, String teldom, String telport, String telpro, String adresse, String codepostal, String ville, String email) {
+     
+        this.nom = nom;
+        this.prenom = prenom;
+        this.teldom = teldom;
+        this.telport = telport;
+        this.telpro = telpro;
+        this.adresse = adresse;
+        this.codepostal = codepostal;
+        this.ville = ville;
+        this.email = email;
+    }
     public Integer getId() {
         return id;
     }

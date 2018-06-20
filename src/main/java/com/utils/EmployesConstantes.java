@@ -23,6 +23,7 @@ public final class EmployesConstantes {
     public static final String ACTION_VOIR_LISTE = "Voir Liste";
     public static final String ACTION_LOGIN = "Login";
     public static final String ACTION_AJOUTER = "Ajouter";
+    public static final String ACTION_ADD_EMPLOYE = "Ajouter Employe";
 
     //Constantes représentant les input de type text ou radio
     public static final String FRM_LOGIN = "login";

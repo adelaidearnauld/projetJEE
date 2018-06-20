@@ -24,7 +24,7 @@
                         <form action="Controleur" method="post">
                             <fieldset>
                                 <input type="submit" name="action" value="Voir Liste" class="btn btn-primary"/>
-                                <input type="submit" name="action" value="Ajouter un employé" class="btn btn-primary"/>
+                                <input type="submit" name="action" value="Ajouter" class="btn btn-primary"/>
                             </fieldset>
                         </form>
                     </div>

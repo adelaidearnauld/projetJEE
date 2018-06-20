@@ -44,7 +44,7 @@ public class EmployeSB {
     public void ajouterEmploye(Employe empl){
         
         Employe employe = new Employe();
-        
+              
         employe.setPrenom(empl.getPrenom());
         employe.setNom(empl.getNom());
         employe.setAdresse(empl.getAdresse());
