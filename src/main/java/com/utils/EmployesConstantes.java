@@ -55,5 +55,6 @@ public final class EmployesConstantes {
     public static final String PAGE_TOUS_LES_EMPLOYES = "/WEB-INF/Vue/tableauEmployes.jsp";
     public static final String PAGE_DETAIL_EMPLOYE = "/WEB-INF/Vue/detailsEmploye.jsp";
     public static final String PAGE_AJOUT_EMPLOYE = "/WEB-INF/Vue/ajoutEmploye.jsp";
+    public static final String PAGE_BIENVENUE = "/WEB-INF/Vue/bienvenue.jsp";
 
 }
