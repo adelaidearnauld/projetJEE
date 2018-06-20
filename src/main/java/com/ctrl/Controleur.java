@@ -61,8 +61,8 @@ public class Controleur extends HttpServlet {
         String loginForm = request.getParameter(EmployesConstantes.FRM_LOGIN);
         String mdpForm = request.getParameter(EmployesConstantes.FRM_MDP);
         String action = request.getParameter(EmployesConstantes.ACTION);
-        listeEmployes = new ArrayList<>();
-        listeCredentials = new ArrayList<>();
+        listeEmployes = new ArrayList<Employe>();
+        listeCredentials = new ArrayList<Identifiants>();
 
         if (action == null) {
             request.getRequestDispatcher(EmployesConstantes.PAGE_INDEX).forward(request, response);
