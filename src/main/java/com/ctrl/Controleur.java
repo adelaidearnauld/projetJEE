@@ -96,12 +96,13 @@ public class Controleur extends HttpServlet {
                                 //de passe présents en base, créer un utilisateur et l'envoyer
                                 //vers la page de tableauEmployes.
                                 if (userBase.getLogin().equals(loginForm) && userBase.getMdp().equals(mdpForm)) {
+                                      request.getRequestDispatcher(EmployesConstantes.PAGE_BIENVENUE).forward(request, response);
                                     //listeEmployes = employeBD.getListeEmployes();
-                                    listeEmployes.clear();
-                                    listeEmployes.addAll(emEmploye.getEmployes());
-                                    //request.setAttribute("cleListeEmployes", listeEmployes);
-                                    request.setAttribute("cleListeEmployes", listeEmployes);
-                                    request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
+//                                    listeEmployes.clear();
+//                                    listeEmployes.addAll(emEmploye.getEmployes());
+//                                    //request.setAttribute("cleListeEmployes", listeEmployes);
+//                                    request.setAttribute("cleListeEmployes", listeEmployes);
+//                                    request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
                                 } //Sinon envoyer vers la page d'accueil avec un message d'erreur.
                                 else {
                                     request.setAttribute("cleMessageErreur", EmployesConstantes.ERREUR_INFOS_CONN_KO);
@@ -171,6 +172,10 @@ public class Controleur extends HttpServlet {
                     listeEmployes.addAll(emEmploye.getEmployes());
                     request.setAttribute("cleListeEmployes", listeEmployes);
                     request.getRequestDispatcher(EmployesConstantes.PAGE_TOUS_LES_EMPLOYES).forward(request, response);
+                    break;
+                    
+                 case EmployesConstantes.ACTION_AJOUTER_EMP:
+                    request.getRequestDispatcher(EmployesConstantes.PAGE_AJOUTER_EMPLOYE).forward(request, response);
                     break;
             }
         }

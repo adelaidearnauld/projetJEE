@@ -19,8 +19,10 @@ public final class EmployesConstantes {
     public static final String ACTION_SUPPRIMER = "Supprimer";
     public static final String ACTION_DETAILS = "Details";
     public static final String ACTION_MODIFIER = "Modifier";
-    public static final String ACTION_VOIR_LISTE = "VoirListe";
+    public static final String ACTION_VOIR_LISTE = "Voir Liste";
     public static final String ACTION_LOGIN = "Login";
+    public static final String ACTION_AJOUTER_EMP = "Ajouter un employé";
+    
 
     //Constantes représentant les input de type text ou radio
     public static final String FRM_LOGIN = "login";
@@ -52,5 +54,6 @@ public final class EmployesConstantes {
 //    public static final String PAGE_CONTROLEUR_TABLEAU = "controleurTableauEmployes.jsp";
     public static final String PAGE_TOUS_LES_EMPLOYES = "/WEB-INF/tableauEmployes.jsp";
     public static final String PAGE_DETAIL_EMPLOYE = "/WEB-INF/detailsEmploye.jsp";
-
+    public static final String PAGE_BIENVENUE = "/WEB-INF/bienvenue.jsp";
+    public static final String PAGE_AJOUTER_EMPLOYE = "/WEB-INF/ajoutEmp.jsp";
 }
