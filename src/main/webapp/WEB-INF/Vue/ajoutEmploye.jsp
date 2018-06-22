@@ -19,6 +19,7 @@
             <div class="col-md-6 col-md-offset-2">
                 <form class="form-horizontal" action="Controleur" method="POST">
                     <fieldset>
+                        
                         <legend>Ajouter un employé</legend>
 
                         <div class="form-group">
@@ -85,7 +86,7 @@
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <div class="pull-right">
-                                    <button type="submit" name="action" value="Ajouter Employe" class="btn btn-primary">Ajouter</button>
+                                    <button type="submit" name="action" value="Ajouter Employe" class="btn btn-primary">Ajouter l'employé</button>
                                 </div>
                             </div>
                         </div>

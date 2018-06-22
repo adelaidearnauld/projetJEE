@@ -53,8 +53,24 @@
                         </c:forEach>
 
                     </table>
+                    
+                    <legend> <font color="green">${CLE_TEST_SUPPRIMER_SUCCES}</font> </legend>
+                    <legend> <font color="red">${CLE_TEST_SUPPRIMER_ECHEC}</font>  </legend>
+                    
+                    
+                    <c:if test="${!empty cleListeEmployes}">
                     <input type="submit" name="action" value="Supprimer" class="btn btn-primary"/>
                     <input type="submit" name="action" value="Details" class="btn btn-primary"/>
+                    </c:if>
+                    
+                    <c:if test="${empty cleListeEmployes}">
+                        <font color="blue">L'entreprise doit recruter !</font>
+                        <br>
+                        <br>
+                        <input type="submit" name="action" value="Créer 5 Employés" class="btn btn-primary"/>
+                                            </c:if>
+                        
+             
                 </form>
             </div>
         </div>         
